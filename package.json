@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "concurrently 'npm:start:*'",
+    "start:server": "browser-sync start -s -w --no-open --no-notify --no-ghost-mode",
+    "start:esbuild": "esbuild --sourcemap --bundle --outfile=bundle.js --watch index.js"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.7",
+    "concurrently": "^6.3.0",
+    "esbuild": "^0.13.11",
+    "three": "brianpeiris/three.js#holoplay-webxr",
+    "holoplay-webxr": "brianpeiris/holoplay-webxr#fix-chrome-threejs",
+    "webxr-polyfill": "brianpeiris/webxr-polyfill#holoplay-webxr"
+  }
+}
